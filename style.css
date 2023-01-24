@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    
+}
+body{
+    margin: 0;
+}
+
+
+:root{
+    --secundario: #00A1BA;
+    --primario:#343434;
+    --primario2: #726B68;
+    --letras-primaria: #fff;
+    --hover: #504e4e;
+}
+
+.icono_menu{
+    background-color: var(--secundario);
+    color:var(--letras-primaria);
+    font-size: 1.5rem;
+    padding: 20px;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu, .submenu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background: var(--primario);
+    width:100%;
+    /* margin-left: -100%; */
+    color:var(--letras-primaria);
+    padding-left: 1.5rem;
+    
+}
+
+.nav_menu{
+    font-size: 1.5rem;
+}
+
+li{
+    padding: 20px;
+}
+.menu_link{ 
+    display: block;
+    color: var(--letras-primaria);
+    text-decoration: none;
+}
+
+.menu_item:hover, .submenu_item:hover{
+    background-color: var(--hover);
+    /* padding: 20px; */
+    
+}
+
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.submenu_item{
+    background-color: var(--primario2);
+    color: var(--letras-primaria);
+    padding-left: 40px;
+
+}
+.mostrar{
+    margin-left: 0;
+}
+
+/* responsive*/
+
+@media(min-width:900px){
+    .icono_menu{
+        display: none;
+    }
+    .nav_menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        /* padding: 15px; */
+        gap:40px;
+        font-size: 25px;
+    }
+    
+    .contenedor_submenu{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        top:75px;
+        width: 180px;
+        overflow: visible;
+        z-index: 2000;
+        opacity:0;
+        visibility: hidden;
+        margin-right: 250px;
+    }
+
+    .contenedor_submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+        color:var(--letras-primaria);  
+}
+}
+
+.prueba{
+    background-color: #00A1BA;
+    
+}
+.lista{
+    /* width: 180px; */
+    padding: 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    /* height: 150px; */
+    gap:50px;
+}
+.itm{
+    list-style: none;
+    background-color: violet;
+    border: 1px solid #000; /* Este es un comentario*/
+    height: 100px;
+    /* order: 0; */
+}
